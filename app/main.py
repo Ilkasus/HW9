@@ -16,3 +16,6 @@ app.include_router(purchases.router, prefix="/purchased", tags=["purchased"])
 def root():
     return {"message": "Welcome to the Flower Marketplace API"}
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
